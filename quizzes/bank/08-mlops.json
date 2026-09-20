@@ -1,0 +1,215 @@
+{
+  "title": "Stage 08 — MLOps",
+  "description": "Deployment, CI/CD, monitoring.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "o01",
+      "prompt": "A notebook accuracy without a pipeline is:",
+      "choices": [
+        "Production-ready",
+        "A demo until serialized, tested, and watched",
+        "A CI system",
+        "Batch scoring"
+      ],
+      "answer": 1,
+      "explanation": "Stage 08 is the gap between demo and product.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o02",
+      "prompt": "Batch scoring means:",
+      "choices": [
+        "An HTTP call per click always",
+        "Scoring a table on a schedule",
+        "Training on GPU batches only",
+        "A/B testing"
+      ],
+      "answer": 1,
+      "explanation": "Often enough; APIs are for latency.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o03",
+      "prompt": "You should serialize:",
+      "choices": [
+        "Only the last linear layer",
+        "The full preprocess + model pipeline",
+        "The test set",
+        "p-values"
+      ],
+      "answer": 1,
+      "explanation": "A scaler fitted elsewhere will silently break.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o04",
+      "prompt": "CI for a model change should include:",
+      "choices": [
+        "Only lint",
+        "Schema checks, golden examples, training on a fixture",
+        "A tweet",
+        "Disabling tests"
+      ],
+      "answer": 1,
+      "explanation": "This repo's Actions run pytest + quiz validation.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o05",
+      "prompt": "Data drift is:",
+      "choices": [
+        "P(Y|X) changed",
+        "P(X) changed",
+        "Git merge conflict",
+        "Dropout"
+      ],
+      "answer": 1,
+      "explanation": "New app version, new country, new sensor.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o06",
+      "prompt": "Concept drift is:",
+      "choices": [
+        "P(X) changed only",
+        "The relationship P(Y|X) changed",
+        "A larger batch size",
+        "L2 penalty"
+      ],
+      "answer": 1,
+      "explanation": "Season, competitors, policy.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o07",
+      "prompt": "CD (continuous delivery) in ML is:",
+      "choices": [
+        "scp from a laptop",
+        "Promoting a versioned artifact through an environment with checks",
+        "Skipping tests",
+        "Retraining every minute always"
+      ],
+      "answer": 1,
+      "explanation": "Approvals and rollback matter.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o08",
+      "prompt": "A model card should record:",
+      "choices": [
+        "Only the author's favorite color",
+        "Who/when/metrics/known failure slices",
+        "The raw passwords",
+        "Random seeds of users"
+      ],
+      "answer": 1,
+      "explanation": "Future you will not remember the caveats.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o09",
+      "prompt": "Random split evaluation can be too kind when:",
+      "choices": [
+        "Rows are i.i.d. forever",
+        "Production is time-based and the world drifts",
+        "n is huge always",
+        "You use MAE"
+      ],
+      "answer": 1,
+      "explanation": "Prefer time holdouts for launched models.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o10",
+      "prompt": "Rollback means:",
+      "choices": [
+        "Deleting git",
+        "Keeping the previous artifact to restore on failure",
+        "Retraining on test",
+        "A left join"
+      ],
+      "answer": 1,
+      "explanation": "Seatbelt.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o11",
+      "prompt": "Logging predictions without privacy rules is:",
+      "choices": [
+        "Always required publicly",
+        "A risk (PII, secrets); log with a policy",
+        "The same as training data",
+        "CI"
+      ],
+      "answer": 1,
+      "explanation": "Minimize, mask, retain with a clock.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o12",
+      "prompt": "Docker's MLOps value is mainly:",
+      "choices": [
+        "Better accuracy",
+        "Reproducible runtimes vs “works on my laptop”",
+        "Automatic causality",
+        "Free GPUs"
+      ],
+      "answer": 1,
+      "explanation": "Same libraries everywhere.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o13",
+      "prompt": "Online vs batch: choose online when:",
+      "choices": [
+        "You like REST",
+        "A decision needs a score within a latency budget at request time",
+        "The table is large",
+        "You have no tests"
+      ],
+      "answer": 1,
+      "explanation": "Otherwise batch is simpler.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o14",
+      "prompt": "Retrain triggers should be:",
+      "choices": [
+        "Vibes only",
+        "Schedule and/or monitored drift/performance alerts",
+        "Every git commit of README",
+        "Never"
+      ],
+      "answer": 1,
+      "explanation": "Watch inputs, outputs, delayed labels.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o15",
+      "prompt": "Golden tests in CI are:",
+      "choices": [
+        "Tests that must never fail even if the world changed — wait, they flag unexpected flips of key examples",
+        "GPU benchmarks only",
+        "SQL linters",
+        "A/B platforms"
+      ],
+      "answer": 0,
+      "explanation": "A flip is not always a bug, but it must be reviewed.",
+      "difficulty": "core"
+    },
+    {
+      "id": "o16",
+      "prompt": "Pickle from the internet is dangerous because:",
+      "choices": [
+        "It is slow",
+        "Unpickling can execute code",
+        "It cannot store sklearn",
+        "Git rejects it"
+      ],
+      "answer": 1,
+      "explanation": "Treat artifacts as untrusted unless you produced them.",
+      "difficulty": "core"
+    }
+  ]
+}

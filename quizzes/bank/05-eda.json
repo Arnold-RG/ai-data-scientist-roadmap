@@ -1,0 +1,215 @@
+{
+  "title": "Stage 05 — Exploratory Data Analysis",
+  "description": "Understanding tables before modeling.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "d01",
+      "prompt": "Grain means:",
+      "choices": [
+        "How shiny a plot is",
+        "One row represents what entity/time unit",
+        "The learning rate",
+        "A SQL isolation level"
+      ],
+      "answer": 1,
+      "explanation": "If grain is wrong, joins explode or metrics double-count.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d02",
+      "prompt": "MNAR missingness is when:",
+      "choices": [
+        "Values are missing completely at random",
+        "Missingness depends on the unobserved value itself",
+        "You forgot to join",
+        "n is small"
+      ],
+      "answer": 1,
+      "explanation": "A missing flag is often more honest than a fancy imputer.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d03",
+      "prompt": "A classic leakage example is:",
+      "choices": [
+        "Using last week's spend to predict this week's churn",
+        "Using the refund timestamp to predict whether a refund occurred",
+        "Plotting a histogram",
+        "Dropping duplicate IDs"
+      ],
+      "answer": 1,
+      "explanation": "Information from after the outcome (or the outcome restated) must not be a feature.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d04",
+      "prompt": "For time-stamped user data, a random row split often:",
+      "choices": [
+        "Is the gold standard",
+        "Leaks the future into the past",
+        "Removes seasonality",
+        "Fixes MNAR"
+      ],
+      "answer": 1,
+      "explanation": "Use a time cutoff (and group splits when the same user repeats).",
+      "difficulty": "core"
+    },
+    {
+      "id": "d05",
+      "prompt": "An outlier can be:",
+      "choices": [
+        "Only a bug",
+        "A bug in units or a real whale that is the story",
+        "Proof of causality",
+        "A p-value"
+      ],
+      "answer": 1,
+      "explanation": "Plot, then decide; do not auto-delete.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d06",
+      "prompt": "Correlation 0 between two variables means:",
+      "choices": [
+        "They are independent",
+        "No linear association (they might still depend nonlinearly)",
+        "PCA failed",
+        "The dtypes differ"
+      ],
+      "answer": 1,
+      "explanation": "Uncorrelated ≠ independent.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d07",
+      "prompt": "IQR outlier fences use:",
+      "choices": [
+        "Mean ± 3 SD only",
+        "Q1 − k·IQR and Q3 + k·IQR",
+        "Min and max",
+        "p < 0.05"
+      ],
+      "answer": 1,
+      "explanation": "Default k=1.5 in the exercise.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d08",
+      "prompt": "A chart title should be:",
+      "choices": [
+        "The variable name only",
+        "A sentence that states the claim",
+        "A hex color",
+        "The SQL query"
+      ],
+      "answer": 1,
+      "explanation": "If you cannot title it, you do not know what it argues.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d09",
+      "prompt": "value_counts(dropna=False) matters because:",
+      "choices": [
+        "It is faster",
+        "NULL/NA is a category you must see",
+        "It runs PCA",
+        "It drops duplicates"
+      ],
+      "answer": 1,
+      "explanation": "Missingness hides if you let pandas drop NA silently.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d10",
+      "prompt": "Target definition must include:",
+      "choices": [
+        "Only the model class",
+        "A time window relative to prediction time",
+        "The cloud vendor",
+        "A seaborn theme"
+      ],
+      "answer": 1,
+      "explanation": "“Churn” without a window is not a label.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d11",
+      "prompt": "Duplicate primary keys usually mean:",
+      "choices": [
+        "More statistical power",
+        "Broken grain; aggregations will lie",
+        "A good outer join",
+        "Stationarity"
+      ],
+      "answer": 1,
+      "explanation": "Audit uniqueness before modeling.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d12",
+      "prompt": "Filling missing values before understanding the mechanism:",
+      "choices": [
+        "Is always best practice",
+        "Can hide MNAR and leak test information if done globally",
+        "Removes the need for flags",
+        "Is required by SQL"
+      ],
+      "answer": 1,
+      "explanation": "Count → condition → decide. Fit imputers on train only.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d13",
+      "prompt": "Log-transforming a right-skewed positive target is often about:",
+      "choices": [
+        "Making PCA causal",
+        "Stabilizing variance / matching a multiplicative story",
+        "Increasing n",
+        "Avoiding a split"
+      ],
+      "answer": 1,
+      "explanation": "EDA should suggest the transform.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d14",
+      "prompt": "Feature ideas during EDA include:",
+      "choices": [
+        "Only raw columns",
+        "Ratios, recency, flags for missing, lags",
+        "The p-value of the whole table",
+        "Random weights"
+      ],
+      "answer": 1,
+      "explanation": "Plots are a lab notebook for features.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d15",
+      "prompt": "A left join that unexpectedly grows row count:",
+      "choices": [
+        "Is impossible",
+        "Signals a non-unique right key",
+        "Means INNER is safer always",
+        "Fixes leakage"
+      ],
+      "answer": 1,
+      "explanation": "Assert grain after joins.",
+      "difficulty": "core"
+    },
+    {
+      "id": "d16",
+      "prompt": "MCAR is:",
+      "choices": [
+        "The most common real-world case",
+        "Missing completely at random — rare, least harmful to drop",
+        "The same as MNAR",
+        "A clustering method"
+      ],
+      "answer": 1,
+      "explanation": "Do not assume MCAR without a story.",
+      "difficulty": "core"
+    }
+  ]
+}

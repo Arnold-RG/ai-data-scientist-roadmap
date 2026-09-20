@@ -1,0 +1,3 @@
+Principal component analysis finds orthogonal directions of largest variance in centered data.
+Those directions are eigenvectors of the covariance matrix. PCA is not a classifier and does not use the target y.
+A high-variance component may be useless for prediction. Always check loadings before naming an axis.

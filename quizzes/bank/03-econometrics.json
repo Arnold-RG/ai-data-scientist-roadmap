@@ -1,0 +1,215 @@
+{
+  "title": "Stage 03 — Econometrics",
+  "description": "Identification, OLS, time series.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "e01",
+      "prompt": "A parameter is unidentified when:",
+      "choices": [
+        "n is small",
+        "Two different stories produce the same observable distribution",
+        "R² is low",
+        "You used robust SEs"
+      ],
+      "answer": 1,
+      "explanation": "More data will not split two observationally equivalent theories.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e02",
+      "prompt": "Exogeneity in Y = Xβ + ε means roughly:",
+      "choices": [
+        "X is Gaussian",
+        "X is uncorrelated with ε",
+        "Y is stationary",
+        "β is sparse"
+      ],
+      "answer": 1,
+      "explanation": "If X correlates with the residual, OLS is not a causal effect.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e03",
+      "prompt": "Ice cream and drownings rising together is usually:",
+      "choices": [
+        "A causal path ice cream → drowning",
+        "Confounding (heat)",
+        "A valid instrument",
+        "Stationarity"
+      ],
+      "answer": 1,
+      "explanation": "Omitted season/temperature.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e04",
+      "prompt": "OLS slope for simple regression is:",
+      "choices": [
+        "Corr(X,Y)",
+        "Cov(X,Y)/Var(X)",
+        "Var(X)/Cov(X,Y)",
+        "E[Y]"
+      ],
+      "answer": 1,
+      "explanation": "Same formula as CUPED's θ.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e05",
+      "prompt": "Homoskedasticity failing primarily:",
+      "choices": [
+        "Biases β always to 0",
+        "Makes usual SEs wrong",
+        "Removes collinearity",
+        "Implies reverse causality"
+      ],
+      "answer": 1,
+      "explanation": "Use robust or clustered SEs; β may still be consistent if exogeneity holds.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e06",
+      "prompt": "Holding other included columns fixed in OLS is:",
+      "choices": [
+        "A laboratory isolation of nature",
+        "A statement about the design matrix, not automatic causality",
+        "The same as randomization",
+        "Proof of identification"
+      ],
+      "answer": 1,
+      "explanation": "ceteris paribus is conditional on the other columns you actually put in X.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e07",
+      "prompt": "A nonstationary trending series fit in levels often yields:",
+      "choices": [
+        "Honest short-run elasticities",
+        "Spurious high R²",
+        "Guaranteed stationarity",
+        "Unbiased SEs"
+      ],
+      "answer": 1,
+      "explanation": "Difference or detrend; compare to a naive baseline.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e08",
+      "prompt": "Weak stationarity means:",
+      "choices": [
+        "The series is i.i.d.",
+        "Mean and autocovariance depend on lag, not calendar time",
+        "No seasonality exists",
+        "ARIMA is unnecessary"
+      ],
+      "answer": 1,
+      "explanation": "Seasonal cycles can still exist if they are stable.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e09",
+      "prompt": "The I in ARIMA refers to:",
+      "choices": [
+        "Instruments",
+        "Differencing toward stationarity",
+        "Imputation",
+        "Independence"
+      ],
+      "answer": 1,
+      "explanation": "Integrated of order d: difference d times.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e10",
+      "prompt": "AR(p) means:",
+      "choices": [
+        "Today depends linearly on p lagged outcomes",
+        "Today is a mix of p future values",
+        "A random walk always",
+        "PCA with p components"
+      ],
+      "answer": 0,
+      "explanation": "Autoregression.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e11",
+      "prompt": "MA(q) means:",
+      "choices": [
+        "Moving average of q lagged shocks",
+        "Monthly aggregation",
+        "Max-abs loss",
+        "A clustering method"
+      ],
+      "answer": 0,
+      "explanation": "Current noise plus lagged noise terms.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e12",
+      "prompt": "A seasonal naive forecast is valuable because:",
+      "choices": [
+        "It always wins Kaggle",
+        "It is a baseline fancy models must beat",
+        "It identifies causal effects",
+        "It removes the need for MAPE"
+      ],
+      "answer": 1,
+      "explanation": "Stage 03 project compares against naive.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e13",
+      "prompt": "Reverse causality is when:",
+      "choices": [
+        "Y causes X as well as (or instead of) X causing Y",
+        "You shuffle a time series",
+        "n < p",
+        "Errors are heavy-tailed"
+      ],
+      "answer": 0,
+      "explanation": "Police and crime, price and demand, etc.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e14",
+      "prompt": "Randomized experiments help identification by:",
+      "choices": [
+        "Maximizing R²",
+        "Making treatment assignment independent of confounders in expectation",
+        "Removing all noise",
+        "Guaranteeing external validity"
+      ],
+      "answer": 1,
+      "explanation": "Internal validity first.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e15",
+      "prompt": "Lognormal families often fit:",
+      "choices": [
+        "Binary clicks",
+        "Positive skewed amounts (revenue, sizes)",
+        "Symmetric residuals guaranteed",
+        "Ranks"
+      ],
+      "answer": 1,
+      "explanation": "Money is often log-ish; plot first.",
+      "difficulty": "core"
+    },
+    {
+      "id": "e16",
+      "prompt": "Perfect collinearity means:",
+      "choices": [
+        "β is unique and tiny",
+        "Coefficients are not uniquely defined",
+        "SEs are robust automatically",
+        "The model is causal"
+      ],
+      "answer": 1,
+      "explanation": "Dummy trap is the classroom example.",
+      "difficulty": "core"
+    }
+  ]
+}

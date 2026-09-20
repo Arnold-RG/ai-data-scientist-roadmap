@@ -1,0 +1,241 @@
+{
+  "title": "Stage 01 — Mathematics",
+  "description": "Linear algebra, calculus, and analysis for models.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "m01",
+      "prompt": "What does the dot product of two centered vectors measure (up to a scale)?",
+      "choices": [
+        "Their Euclidean lengths",
+        "A quantity proportional to covariance",
+        "The determinant of the data matrix",
+        "Mutual information"
+      ],
+      "answer": 1,
+      "explanation": "After centering, a·b = Σ (x−x̄)(y−ȳ), which is (n−1) times sample covariance.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m02",
+      "prompt": "Linear regression prediction ŷ = w·x is best described as:",
+      "choices": [
+        "A convolution",
+        "A pairwise attention map",
+        "A weighted sum of features",
+        "An eigendecomposition"
+      ],
+      "answer": 2,
+      "explanation": "Each feature is multiplied by a weight and summed — a dot product.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m03",
+      "prompt": "PCA keeps eigenvectors of which matrix (centered data)?",
+      "choices": [
+        "The confusion matrix",
+        "The covariance matrix",
+        "The Hessian of the loss",
+        "The adjacency matrix"
+      ],
+      "answer": 1,
+      "explanation": "Principal axes are eigenvectors of the covariance (or singular vectors of the data matrix).",
+      "difficulty": "core"
+    },
+    {
+      "id": "m04",
+      "prompt": "If two columns of X are identical, XᵀX is typically:",
+      "choices": [
+        "Orthogonal",
+        "Full rank",
+        "Singular / not invertible",
+        "A permutation matrix"
+      ],
+      "answer": 2,
+      "explanation": "Perfect collinearity makes the Gram matrix singular; OLS has no unique solution.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m05",
+      "prompt": "SVD X = UΣVᵀ is intuitively:",
+      "choices": [
+        "Cluster, then classify, then scale",
+        "Rotate, stretch, rotate",
+        "Dropout, then ReLU, then softmax",
+        "Bag, boost, then stack"
+      ],
+      "answer": 1,
+      "explanation": "V aligns input directions, Σ stretches, U maps to the output basis.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m06",
+      "prompt": "The gradient ∇L(w) points toward:",
+      "choices": [
+        "Steepest decrease of L",
+        "Steepest increase of L",
+        "The nearest global minimum",
+        "The average of the data"
+      ],
+      "answer": 1,
+      "explanation": "Gradient ascent follows ∇L; descent uses −∇L.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m07",
+      "prompt": "In w ← w − η∇L, η is:",
+      "choices": [
+        "L2 penalty",
+        "Momentum",
+        "Learning rate",
+        "Batch size"
+      ],
+      "answer": 2,
+      "explanation": "η scales the step. Too large overshoots; too small crawls.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m08",
+      "prompt": "Backpropagation is primarily:",
+      "choices": [
+        "A clustering algorithm",
+        "The chain rule on a computation graph",
+        "Bayesian model averaging",
+        "A SQL window function"
+      ],
+      "answer": 1,
+      "explanation": "Local derivatives multiply along paths from weights to the loss.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m09",
+      "prompt": "Vanishing gradients happen when:",
+      "choices": [
+        "You forget to shuffle",
+        "A product of many small derivatives collapses to ~0",
+        "The dataset is too large",
+        "Dropout is 0"
+      ],
+      "answer": 1,
+      "explanation": "Sigmoid/tanh saturation and long unrolled nets make the product tiny.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m10",
+      "prompt": "A convex smooth loss means local minima are:",
+      "choices": [
+        "Always saddle points",
+        "Global minima",
+        "Sharper than non-convex ones",
+        "Independent of initialization"
+      ],
+      "answer": 1,
+      "explanation": "Convexity: any local min is global. Deep nets are generally not convex.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m11",
+      "prompt": "L2 regularization is the Lagrangian cousin of:",
+      "choices": [
+        "A sparsity-inducing ℓ0 count",
+        "Constraining ||w||₂ inside a ball",
+        "Max-margin hinge only",
+        "Batch normalization"
+      ],
+      "answer": 1,
+      "explanation": "Ridge corresponds to a Euclidean ball constraint on weights.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m12",
+      "prompt": "Softmax of logits [0, 0, 0] is:",
+      "choices": [
+        "[1, 0, 0]",
+        "Undefined",
+        "Uniform [1/3, 1/3, 1/3]",
+        "All zeros"
+      ],
+      "answer": 2,
+      "explanation": "Equal logits → equal probabilities.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m13",
+      "prompt": "Why train with cross-entropy rather than accuracy?",
+      "choices": [
+        "Accuracy is slower to compute",
+        "Accuracy is discontinuous / flat almost everywhere, so gradients vanish",
+        "Cross-entropy is scale-free always",
+        "Accuracy requires GPUs"
+      ],
+      "answer": 1,
+      "explanation": "Accuracy does not give useful gradients for SGD.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m14",
+      "prompt": "The Hessian of a loss is:",
+      "choices": [
+        "First derivatives of a vector map",
+        "Second derivatives of a scalar loss",
+        "The confusion matrix",
+        "A dropout mask"
+      ],
+      "answer": 1,
+      "explanation": "Hᵢⱼ = ∂²L/∂wᵢ∂wⱼ. PSD Hessian relates to convexity.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m15",
+      "prompt": "Cosine similarity is a dot product after:",
+      "choices": [
+        "ReLU",
+        "L2-normalizing both vectors",
+        "Softmax",
+        "Batch norm with momentum 0"
+      ],
+      "answer": 1,
+      "explanation": "On the unit sphere, a·b = cos θ.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m16",
+      "prompt": "Attention scores before softmax are typically:",
+      "choices": [
+        "Convolutions of Q with a 3×3 kernel",
+        "Scaled dot products between queries and keys",
+        "k-means distances",
+        "PCA loadings"
+      ],
+      "answer": 1,
+      "explanation": "QKᵀ/√d, then softmax. See Stage 07.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m17",
+      "prompt": "Exploding gradients mean the composition is locally:",
+      "choices": [
+        "Too flat (Lipschitz constant ~0)",
+        "Too steep",
+        "Discrete",
+        "Convex"
+      ],
+      "answer": 1,
+      "explanation": "Clipping is a blunt cap on that steepness.",
+      "difficulty": "core"
+    },
+    {
+      "id": "m18",
+      "prompt": "For a single point x=2, y=5 and ŷ=w₁x+w₀, many (w₀,w₁) fit. This is:",
+      "choices": [
+        "Overdetermined",
+        "Underdetermined",
+        "A rank-3 SVD",
+        "A Type I error"
+      ],
+      "answer": 1,
+      "explanation": "Two parameters, one observation: a line of solutions.",
+      "difficulty": "core"
+    }
+  ]
+}

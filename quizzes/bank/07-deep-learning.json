@@ -1,0 +1,215 @@
+{
+  "title": "Stage 07 — Deep Learning",
+  "description": "Dense nets, CNN, RNN, transformers.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "dl01",
+      "prompt": "A dense layer computes:",
+      "choices": [
+        "Max pooling",
+        "σ(Wx + b)",
+        "k-means",
+        "A SQL join"
+      ],
+      "answer": 1,
+      "explanation": "Linear map plus nonlinearity.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl02",
+      "prompt": "ReLU is:",
+      "choices": [
+        "1/(1+e^{-z})",
+        "max(0, z)",
+        "z/||z||",
+        "softmax"
+      ],
+      "answer": 1,
+      "explanation": "Cheap, sparse, can die.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl03",
+      "prompt": "Softmax should be paired with:",
+      "choices": [
+        "Squared error on one-hot as the default",
+        "Cross-entropy / log loss",
+        "MAE",
+        "Silhouette"
+      ],
+      "answer": 1,
+      "explanation": "MSE + softmax saturates poorly.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl04",
+      "prompt": "Convolution is useful because:",
+      "choices": [
+        "It ignores locality",
+        "It shares weights spatially on a grid",
+        "It is a transformer encoder",
+        "It removes the need for data"
+      ],
+      "answer": 1,
+      "explanation": "Locality + parameter sharing.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl05",
+      "prompt": "Receptive field grows with:",
+      "choices": [
+        "Dropout only",
+        "Depth / stacked kernels and pooling",
+        "The learning rate",
+        "Batch size only"
+      ],
+      "answer": 1,
+      "explanation": "Later maps see larger original regions.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl06",
+      "prompt": "Transfer learning on images usually:",
+      "choices": [
+        "Trains a net from random weights on 20 photos",
+        "Reuses a pretrained backbone and replaces the head",
+        "Is illegal",
+        "Requires SVD"
+      ],
+      "answer": 1,
+      "explanation": "Small learning rates if you unfreeze.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl07",
+      "prompt": "Vanilla RNNs struggle with long memory because:",
+      "choices": [
+        "They cannot share weights",
+        "Gradients vanish/explode through time",
+        "They need images",
+        "Softmax is undefined"
+      ],
+      "answer": 1,
+      "explanation": "Product of many W_h factors.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl08",
+      "prompt": "LSTM gates exist to:",
+      "choices": [
+        "Plot loss",
+        "Control what the cell stores, writes, and exposes",
+        "Replace attention always",
+        "Normalize batches"
+      ],
+      "answer": 1,
+      "explanation": "A highway for information and gradients.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl09",
+      "prompt": "Scaled dot-product attention is:",
+      "choices": [
+        "softmax(QKᵀ/√d) then mix V",
+        "ReLU(Q+K)",
+        "PCA(Q)",
+        "Conv(K, 3)"
+      ],
+      "answer": 0,
+      "explanation": "√d keeps logits from saturating softmax.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl10",
+      "prompt": "GPT-style models are trained with:",
+      "choices": [
+        "A bidirectional mask",
+        "A causal mask (no future tokens)",
+        "Only images",
+        "k-means"
+      ],
+      "answer": 1,
+      "explanation": "Next-token prediction.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl11",
+      "prompt": "BERT-style encoders see:",
+      "choices": [
+        "Only the past",
+        "Bidirectional context (with a masked-token objective in pretraining)",
+        "Only one token",
+        "Audio only"
+      ],
+      "answer": 1,
+      "explanation": "Good for classification and embeddings.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl12",
+      "prompt": "Positional encodings exist because:",
+      "choices": [
+        "Softmax is slow",
+        "Bare attention has no built-in order",
+        "ReLU needs them",
+        "CNNs cannot pad"
+      ],
+      "answer": 1,
+      "explanation": "Without them, permutation of tokens is too symmetric.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl13",
+      "prompt": "Dropout during eval should typically be:",
+      "choices": [
+        "Stronger than train",
+        "Off (eval/deterministic path)",
+        "Applied to labels",
+        "1.0"
+      ],
+      "answer": 1,
+      "explanation": "Forgetting model.eval() is a famous bug with dropout/BN.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl14",
+      "prompt": "BatchNorm train vs eval differs because:",
+      "choices": [
+        "Eval uses batch stats of size 1 always as a rule of law",
+        "Eval uses running population stats",
+        "They are identical",
+        "Eval disables the linear map"
+      ],
+      "answer": 1,
+      "explanation": "Mismatched modes shift activations.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl15",
+      "prompt": "Why flatten-to-dense is a bad first layer on 224×224 RGB:",
+      "choices": [
+        "Too few parameters",
+        "Enormous dense map and no locality",
+        "Softmax cannot run",
+        "NumPy cannot store images"
+      ],
+      "answer": 1,
+      "explanation": "Convolution respects the grid.",
+      "difficulty": "core"
+    },
+    {
+      "id": "dl16",
+      "prompt": "Adam is:",
+      "choices": [
+        "A clustering method",
+        "An adaptive per-parameter SGD variant",
+        "A loss",
+        "A transformer block"
+      ],
+      "answer": 1,
+      "explanation": "Still needs a sensible learning rate.",
+      "difficulty": "core"
+    }
+  ]
+}

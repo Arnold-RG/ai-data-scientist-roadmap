@@ -1,0 +1,267 @@
+{
+  "title": "Interview warmups",
+  "description": "Twenty rapid-fire questions in interview tone.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "i01",
+      "prompt": "Say what a p-value is in one breath.",
+      "choices": [
+        "Probability the hypothesis is true",
+        "Probability under H₀ of a result at least this extreme",
+        "The effect size",
+        "1 − accuracy"
+      ],
+      "answer": 1,
+      "explanation": "If you said “probability the null is true,” that is the trap.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i02",
+      "prompt": "How do you split a churn model?",
+      "choices": [
+        "Shuffle all rows 80/20 always",
+        "Time-based (and user-aware) so the future is not in train",
+        "Use the test set for CV",
+        "No split if n>1000"
+      ],
+      "answer": 1,
+      "explanation": "Production is tomorrow, not a random Tuesday mixed in.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i03",
+      "prompt": "Accuracy 99% on rare fraud. Next question?",
+      "choices": [
+        "Ship",
+        "Show the confusion matrix / precision-recall at the budgeted threshold",
+        "Switch to k-means",
+        "Increase dropout"
+      ],
+      "answer": 1,
+      "explanation": "Costs live in the cells, not the average.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i04",
+      "prompt": "Why randomize users, not sessions, for a pricing test?",
+      "choices": [
+        "Sessions are always better",
+        "The same user can see both prices; interference/leakage",
+        "SQL cannot group users",
+        "CLT fails on users"
+      ],
+      "answer": 1,
+      "explanation": "Unit of randomization vs unit of analysis.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i05",
+      "prompt": "Interpret β=−0.2 in log(wage) on years of education, casually?",
+      "choices": [
+        "Education cuts wages 20%",
+        "You still need identification; if causal and log, about −18% multiplicative — but OVB is likely",
+        "It is a p-value",
+        "PCA loading"
+      ],
+      "answer": 1,
+      "explanation": "Interviewers want the causal caveat more than the  e^β−1 arithmetic.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i06",
+      "prompt": "What is leakage in one example?",
+      "choices": [
+        "Using age",
+        "Using “days_to_churn” as a feature to predict churn",
+        "Standardizing on train",
+        "A time split"
+      ],
+      "answer": 1,
+      "explanation": "The label in disguise.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i07",
+      "prompt": "Bagging vs boosting, 10 seconds.",
+      "choices": [
+        "Same algorithm",
+        "Bagging averages independent noisy trees; boosting adds trees to residuals",
+        "Boosting is unsupervised",
+        "Bagging is RAG"
+      ],
+      "answer": 1,
+      "explanation": "Variance vs sequential bias attack.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i08",
+      "prompt": "When is an LLM the wrong first model?",
+      "choices": [
+        "Never",
+        "Tabular prediction with 50 numeric columns and a clear target — start with a GBM/logistic",
+        "Any text",
+        "Any image"
+      ],
+      "answer": 1,
+      "explanation": "Match the modality and the metric.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i09",
+      "prompt": "How do you know a forecast is any good?",
+      "choices": [
+        "High R² on the training years",
+        "Beat a seasonal naive on a time holdout with MAE/MAPE you can explain",
+        "Low p-value",
+        "More layers"
+      ],
+      "answer": 1,
+      "explanation": "Baselines first.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i10",
+      "prompt": "What do you serialize for sklearn prod?",
+      "choices": [
+        "coef_ only",
+        "The pipeline: impute, encode, model",
+        "The notebook",
+        "requirements without the pickle"
+      ],
+      "answer": 1,
+      "explanation": "Otherwise production features differ.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i11",
+      "prompt": "Data vs concept drift?",
+      "choices": [
+        "Synonyms",
+        "P(X) vs P(Y|X)",
+        "Train vs test size",
+        "CPU vs GPU"
+      ],
+      "answer": 1,
+      "explanation": "Both need monitors; responses differ.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i12",
+      "prompt": "RAG failed. First debug?",
+      "choices": [
+        "Bigger LLM",
+        "Did we retrieve the right chunk (recall@k)?",
+        "Fine-tune immediately",
+        "Raise temperature"
+      ],
+      "answer": 1,
+      "explanation": "Fluent wrong is still wrong.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i13",
+      "prompt": "Why not peek at p every hour?",
+      "choices": [
+        "It is more agile",
+        "Optional stopping inflates false positives",
+        "CUPED forbids it only",
+        "SQL is slow"
+      ],
+      "answer": 1,
+      "explanation": "Sequential designs exist; “just glance” is not one.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i14",
+      "prompt": "k-means gave 4 clusters. Are they good?",
+      "choices": [
+        "If silhouette > 0.2, ship",
+        "Can a human name them and would marketing act? Sizes, profiles, stability",
+        "If k=4 in the paper",
+        "If PCA 2D looks pretty"
+      ],
+      "answer": 1,
+      "explanation": "Actionability over a number.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i15",
+      "prompt": "Attention is:",
+      "choices": [
+        "A database index",
+        "Weighted combination of values using query-key similarities",
+        "Dropout",
+        "A join"
+      ],
+      "answer": 1,
+      "explanation": "QKᵀ then V.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i16",
+      "prompt": "SQL COUNT(*) vs COUNT(user_id):",
+      "choices": [
+        "Always equal",
+        "COUNT(user_id) skips NULL user_id",
+        "COUNT(*) skips all-null rows only in MySQL poetry",
+        "They count distinct"
+      ],
+      "answer": 1,
+      "explanation": "NULLs.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i17",
+      "prompt": "You have 2 weeks. Model or experiment?",
+      "choices": [
+        "Always deep learning",
+        "If you can randomize a product change, experiment; model if you must target or cannot ship a test",
+        "Always k-means",
+        "Always RAG"
+      ],
+      "answer": 1,
+      "explanation": "Causal product questions love randomization.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i18",
+      "prompt": "Regularization is:",
+      "choices": [
+        "A way to use the test set",
+        "A penalty/constraint so weights do not interpolate noise",
+        "Dropout only",
+        "CUPED"
+      ],
+      "answer": 1,
+      "explanation": "Choose λ on validation.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i19",
+      "prompt": "A coding assistant writes your pipeline. You:",
+      "choices": [
+        "Commit",
+        "Write/keep tests, hunt leakage, refuse unexplained lines",
+        "Delete the tests it added",
+        "Increase temperature"
+      ],
+      "answer": 1,
+      "explanation": "Stage 10.",
+      "difficulty": "core"
+    },
+    {
+      "id": "i20",
+      "prompt": "What is the target in one sentence for churn?",
+      "choices": [
+        "Users who are bad",
+        "No qualifying activity in the next W days, predicted at time t using only data ≤ t",
+        "Uninstall events only",
+        "NPS"
+      ],
+      "answer": 1,
+      "explanation": "Window + prediction time + available features.",
+      "difficulty": "core"
+    }
+  ]
+}

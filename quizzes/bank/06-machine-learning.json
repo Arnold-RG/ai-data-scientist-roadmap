@@ -1,0 +1,241 @@
+{
+  "title": "Stage 06 — Machine Learning",
+  "description": "Supervised, unsupervised, ensembles.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "l01",
+      "prompt": "Why not use accuracy on 1% fraud?",
+      "choices": [
+        "It is slow",
+        "A majority classifier scores ~99% and is useless",
+        "AUC cannot be computed",
+        "Trees cannot run"
+      ],
+      "answer": 1,
+      "explanation": "Use precision/recall, PR-AUC, costs, and a confusion matrix.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l02",
+      "prompt": "Scalers should be fit on:",
+      "choices": [
+        "Train+test together for stability",
+        "Training data only, then applied to val/test",
+        "Test only",
+        "The target"
+      ],
+      "answer": 1,
+      "explanation": "Otherwise evaluation peeks at the test distribution.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l03",
+      "prompt": "Logistic regression plus log loss is:",
+      "choices": [
+        "Unsuitable as a baseline",
+        "A strong, calibrated-friendly tabular baseline",
+        "A clustering algorithm",
+        "PCA"
+      ],
+      "answer": 1,
+      "explanation": "Start here before boosting.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l04",
+      "prompt": "Ridge vs lasso:",
+      "choices": [
+        "Ridge zeros coefficients; lasso shrinks only",
+        "Ridge shrinks (L2); lasso can zero (L1)",
+        "They are identical",
+        "Lasso is only for images"
+      ],
+      "answer": 1,
+      "explanation": "Geometry: ball vs diamond.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l05",
+      "prompt": "Shuffled k-fold on a time series:",
+      "choices": [
+        "Is required",
+        "Leaks future information",
+        "Removes trend",
+        "Is the same as rolling origin"
+      ],
+      "answer": 1,
+      "explanation": "Use rolling-origin / time splits.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l06",
+      "prompt": "k-means assumes clusters that are roughly:",
+      "choices": [
+        "Nested rings",
+        "Spherical blobs of similar size in the scaled space",
+        "Directed graphs",
+        "Trees"
+      ],
+      "answer": 1,
+      "explanation": "Scale features; k is a product choice too.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l07",
+      "prompt": "PCA is:",
+      "choices": [
+        "Supervised feature selection",
+        "Orthogonal directions of variance (compression)",
+        "A classifier",
+        "CUPED"
+      ],
+      "answer": 1,
+      "explanation": "High-variance axes need not predict y.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l08",
+      "prompt": "Bagging mainly reduces:",
+      "choices": [
+        "Bias by shrinking trees to stumps only",
+        "Variance by averaging noisy models",
+        "n",
+        "Regularization λ automatically"
+      ],
+      "answer": 1,
+      "explanation": "Random forests are bagged trees with feature randomness.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l09",
+      "prompt": "Boosting fits new trees to:",
+      "choices": [
+        "Random labels",
+        "Residuals / negative gradients of the loss",
+        "PCA scores only",
+        "The test set"
+      ],
+      "answer": 1,
+      "explanation": "Sequential error-correcting.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l10",
+      "prompt": "Stacking leaks if the meta-model:",
+      "choices": [
+        "Uses out-of-fold predictions",
+        "Sees in-fold predictions of base models",
+        "Is linear",
+        "Uses log loss"
+      ],
+      "answer": 1,
+      "explanation": "Out-of-fold is the fix.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l11",
+      "prompt": "Precision is:",
+      "choices": [
+        "TP/(TP+FN)",
+        "TP/(TP+FP)",
+        "TN/(TN+FP)",
+        "Accuracy"
+      ],
+      "answer": 1,
+      "explanation": "Of what you flagged, how much was right.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l12",
+      "prompt": "Recall is:",
+      "choices": [
+        "TP/(TP+FN)",
+        "TP/(TP+FP)",
+        "The p-value",
+        "1 − accuracy"
+      ],
+      "answer": 0,
+      "explanation": "Of the actual positives, how many you caught.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l13",
+      "prompt": "A decision tree's feature importance is:",
+      "choices": [
+        "A causal effect",
+        "A greedy split statistic — not causation",
+        "A p-value",
+        "SHAP by definition"
+      ],
+      "answer": 1,
+      "explanation": "Do not present importances as policy effects.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l14",
+      "prompt": "Imbalanced classification threshold should be chosen:",
+      "choices": [
+        "Always at 0.5",
+        "Using validation and business costs",
+        "To maximize training accuracy only",
+        "At random"
+      ],
+      "answer": 1,
+      "explanation": "0.5 is a habit, not a law.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l15",
+      "prompt": "Silhouette is useful but:",
+      "choices": [
+        "Proves segments are actionable",
+        "Can look fine on clusters you cannot name or use",
+        "Replaces k",
+        "Is a causal estimate"
+      ],
+      "answer": 1,
+      "explanation": "Profile clusters for humans.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l16",
+      "prompt": "On small/medium tabular data, a well-tuned GBM vs a small net often:",
+      "choices": [
+        "Loses always",
+        "Wins or ties — nets are not automatic first choice",
+        "Cannot overfit",
+        "Needs no validation"
+      ],
+      "answer": 1,
+      "explanation": "Use nets when data/representation demand it.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l17",
+      "prompt": "The test set is for:",
+      "choices": [
+        "Tuning all hyperparameters",
+        "A final, rare estimate of generalization",
+        "Fitting the scaler",
+        "Choosing k repeatedly"
+      ],
+      "answer": 1,
+      "explanation": "Touch it once.",
+      "difficulty": "core"
+    },
+    {
+      "id": "l18",
+      "prompt": "Regularization strength is a hyperparameter chosen on:",
+      "choices": [
+        "The test set",
+        "Validation / CV",
+        "Production logs after launch only",
+        "The README"
+      ],
+      "answer": 1,
+      "explanation": "Otherwise you overfit the test.",
+      "difficulty": "core"
+    }
+  ]
+}

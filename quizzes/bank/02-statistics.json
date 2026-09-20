@@ -1,0 +1,241 @@
+{
+  "title": "Stage 02 — Statistics",
+  "description": "CLT, tests, sampling, experiments.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "s01",
+      "prompt": "The CLT is about the distribution of:",
+      "choices": [
+        "Raw observations always becoming Gaussian",
+        "Sample means (sums) of i.i.d. finite-variance variables",
+        "Medians of Cauchy data",
+        "p-values under H₁"
+      ],
+      "answer": 1,
+      "explanation": "Averages become approximately normal; your histogram of y may stay skewed.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s02",
+      "prompt": "Standard error of the mean (i.i.d., finite var) scales as:",
+      "choices": [
+        "1/n",
+        "1/√n",
+        "√n",
+        "n²"
+      ],
+      "answer": 1,
+      "explanation": "SE = s/√n. Quadrupling n halves SE.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s03",
+      "prompt": "A p-value is:",
+      "choices": [
+        "P(H₀ is true | data)",
+        "P(data at least this extreme | H₀)",
+        "The false discovery rate itself",
+        "1 − power"
+      ],
+      "answer": 1,
+      "explanation": "It is a tail probability under the null, not a posterior on H₀.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s04",
+      "prompt": "Type I error is:",
+      "choices": [
+        "Missing a real effect",
+        "Rejecting a true null",
+        "Mis-specifying a distribution",
+        "Using a biased sample"
+      ],
+      "answer": 1,
+      "explanation": "False positive. α is the Type I rate you tolerate.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s05",
+      "prompt": "Peeking daily and stopping at p<0.05 mainly:",
+      "choices": [
+        "Increases power with no cost",
+        "Inflates Type I error",
+        "Removes the need for MDE",
+        "Makes CUPED invalid"
+      ],
+      "answer": 1,
+      "explanation": "The p-value is calibrated for a planned analysis, not optional stopping.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s06",
+      "prompt": "CUPED adjusts Y using a covariate X that should be:",
+      "choices": [
+        "The treatment indicator",
+        "Measured before treatment and correlated with Y",
+        "The post-period revenue only",
+        "A random integer"
+      ],
+      "answer": 1,
+      "explanation": "Pre-period X keeps the adjustment from eating the treatment effect.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s07",
+      "prompt": "Cohen's d is:",
+      "choices": [
+        "A p-value",
+        "A standardized mean difference",
+        "A clustering silhouette",
+        "AUC"
+      ],
+      "answer": 1,
+      "explanation": "Effect size: difference of means over a pooled SD.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s08",
+      "prompt": "Bootstrap cannot fix:",
+      "choices": [
+        "Lack of an analytic SE formula",
+        "A systematically biased sampling frame",
+        "Awkward statistics like medians",
+        "Mild non-normality of the estimator"
+      ],
+      "answer": 1,
+      "explanation": "Resampling a biased sample estimates the wrong distribution precisely.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s09",
+      "prompt": "A 95% CI procedure means:",
+      "choices": [
+        "The true value is in this interval with probability 95% after seeing it (frequentist)",
+        "In repeated samples, 95% of such intervals cover the truth",
+        "p must be 0.05",
+        "The metric is causal"
+      ],
+      "answer": 1,
+      "explanation": "Coverage is a property of the procedure, not a posterior of one interval.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s10",
+      "prompt": "Ratio metrics (revenue per user) need extra care because:",
+      "choices": [
+        "They are always Gaussian",
+        "Numerator and denominator are both random",
+        "They cannot be CUPED",
+        "SQL cannot compute them"
+      ],
+      "answer": 1,
+      "explanation": "Delta method or linearized estimators account for both sources of noise.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s11",
+      "prompt": "Statistical power is:",
+      "choices": [
+        "Type I error",
+        "1 − Type II error (chance to detect a real effect)",
+        "1 − α",
+        "The p-value"
+      ],
+      "answer": 1,
+      "explanation": "Power comes from n, effect size, variance, and α.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s12",
+      "prompt": "Multiple unadjusted tests at α=0.05 tend to:",
+      "choices": [
+        "Decrease false positives",
+        "Produce extra false wins",
+        "Guarantee FDR < 5%",
+        "Replace the need for a primary metric"
+      ],
+      "answer": 1,
+      "explanation": "Pre-register one primary metric or correct extras (Bonferroni/FDR).",
+      "difficulty": "core"
+    },
+    {
+      "id": "s13",
+      "prompt": "Random assignment in A/B tests is valuable because it:",
+      "choices": [
+        "Maximizes R²",
+        "Makes treatment independent of confounders in expectation",
+        "Removes the need for a primary metric",
+        "Guarantees a large effect"
+      ],
+      "answer": 1,
+      "explanation": "That is the identification engine of experiments.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s14",
+      "prompt": "Unit of randomization should match:",
+      "choices": [
+        "The GPU batch size",
+        "How interference and analysis are defined (user vs session)",
+        "The number of dashboards",
+        "p-value thresholds"
+      ],
+      "answer": 1,
+      "explanation": "Session randomization with user-level outcomes often leaks.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s15",
+      "prompt": "Bayes' rule is most needed when:",
+      "choices": [
+        "Base rates are extreme and tests are imperfect",
+        "n is infinite",
+        "The CLT fails only",
+        "You use k-means"
+      ],
+      "answer": 0,
+      "explanation": "Rare disease + accurate test is the classic trap.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s16",
+      "prompt": "Sample variance uses n−1 so that:",
+      "choices": [
+        "It matches the population when n=1",
+        "The estimator of σ² is unbiased under usual assumptions",
+        "p-values become smaller",
+        "CLT applies to medians"
+      ],
+      "answer": 1,
+      "explanation": "ddof=1 is Bessel's correction.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s17",
+      "prompt": "A statistically significant tiny lift with a huge n:",
+      "choices": [
+        "Must be shipped",
+        "May still be practically useless",
+        "Violates CLT",
+        "Implies CUPED failed"
+      ],
+      "answer": 1,
+      "explanation": "Always pair significance with effect size and CI.",
+      "difficulty": "core"
+    },
+    {
+      "id": "s18",
+      "prompt": "MDE (minimum detectable effect) is used to:",
+      "choices": [
+        "Replace α",
+        "Plan sample size so you do not miss a lift you care about",
+        "Impute missing data",
+        "Choose k in k-means"
+      ],
+      "answer": 1,
+      "explanation": "Design the experiment before looking at p.",
+      "difficulty": "core"
+    }
+  ]
+}

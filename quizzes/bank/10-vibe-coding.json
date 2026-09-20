@@ -1,0 +1,215 @@
+{
+  "title": "Stage 10 — AI-assisted coding",
+  "description": "Assistants and app builders with judgment.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "v01",
+      "prompt": "The safest loop with a coding assistant is:",
+      "choices": [
+        "Accept all diffs",
+        "Spec/tests first, then implement, then read the diff and run tests",
+        "Paste production secrets for context",
+        "Disable pytest"
+      ],
+      "answer": 1,
+      "explanation": "Stage 10 is review skill.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v02",
+      "prompt": "A common silent ML bug assistants introduce:",
+      "choices": [
+        "Using pathlib",
+        "Scaling or encoding on train+test together",
+        "Type hints",
+        "A README"
+      ],
+      "answer": 1,
+      "explanation": "Leakage looks like extra accuracy.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v03",
+      "prompt": "Untrusted pickle or SQL concatenated from a prompt is:",
+      "choices": [
+        "Fine in production",
+        "A security issue",
+        "Required for RAG",
+        "A form of CI"
+      ],
+      "answer": 1,
+      "explanation": "Generated code can drop secrets and inject SQL.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v04",
+      "prompt": "App builders that scaffold whole apps still need:",
+      "choices": [
+        "No review",
+        "Auth, secrets, and failure-mode checks by you, the owner",
+        "Only a domain name",
+        "A larger temperature"
+      ],
+      "answer": 1,
+      "explanation": "You ship it; you own it.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v05",
+      "prompt": "If you cannot explain a generated line:",
+      "choices": [
+        "Ship it for speed",
+        "It does not ship until you can",
+        "Ask for more files",
+        "Increase context"
+      ],
+      "answer": 1,
+      "explanation": "Interviews will find the gap.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v06",
+      "prompt": "Assistants are typically strong at:",
+      "choices": [
+        "Causal identification",
+        "Boilerplate and translating a precise spec",
+        "Knowing your undocumented grain",
+        "Fairness policy"
+      ],
+      "answer": 1,
+      "explanation": "They do not know your warehouse.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v07",
+      "prompt": "Using an assistant on the capstone is:",
+      "choices": [
+        "Forbidden in this repo",
+        "Allowed if tests pass and the executive summary is yours to defend",
+        "A replacement for Stage 02",
+        "Proof of production MLOps"
+      ],
+      "answer": 1,
+      "explanation": "Do not skip the report.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v08",
+      "prompt": "Time-series shuffled CV in generated notebooks is:",
+      "choices": [
+        "Best practice",
+        "A leakage smell you must catch",
+        "Required by sklearn",
+        "The same as rolling origin"
+      ],
+      "answer": 1,
+      "explanation": "Read the split.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v09",
+      "prompt": "A good thing to ask the assistant after a first draft:",
+      "choices": [
+        "“Make it longer”",
+        "“Where could this leak the target or leak the test set?”",
+        "“Remove all tests”",
+        "“Hardcode the AUC”"
+      ],
+      "answer": 1,
+      "explanation": "Adversarial review.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v10",
+      "prompt": "Copying generated analysis you do not understand into a portfolio is:",
+      "choices": [
+        "Efficient networking",
+        "Misrepresentation; this is a study repo",
+        "Required by MIT license",
+        "A model card"
+      ],
+      "answer": 1,
+      "explanation": "Interviewers notice in a few questions.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v11",
+      "prompt": "Lockfiles and dependency review matter for generated apps because:",
+      "choices": [
+        "They increase accuracy",
+        "Supply-chain and version drift are real",
+        "They replace tests",
+        "SQL cannot run without them"
+      ],
+      "answer": 1,
+      "explanation": "Do not pip install mystery extras.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v12",
+      "prompt": "The assistant's explanation of a p-value is:",
+      "choices": [
+        "Always correct",
+        "Something you verify against Stage 02",
+        "A substitute for CUPED",
+        "Causal"
+      ],
+      "answer": 1,
+      "explanation": "Fluency ≠ correctness.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v13",
+      "prompt": "When generated code uses iterrows on a large frame:",
+      "choices": [
+        "Trust it",
+        "Replace with vectorized/groupby as in Stage 04",
+        "Add more loops",
+        "Increase η"
+      ],
+      "answer": 1,
+      "explanation": "You still own performance.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v14",
+      "prompt": "Secrets in .env committed by a builder:",
+      "choices": [
+        "Are convenient",
+        "Must be gitignored and rotated if leaked",
+        "Belong in README",
+        "Are required by pytest"
+      ],
+      "answer": 1,
+      "explanation": "This repo gitignores .env patterns via common sense; never commit keys.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v15",
+      "prompt": "“Vibe coding” on the official roadmap is:",
+      "choices": [
+        "Skipping math",
+        "Using AI coding assistants and app builders as a professional skill",
+        "Only generating quizzes",
+        "Unsupervised clustering"
+      ],
+      "answer": 1,
+      "explanation": "It comes last because judgment requires Stages 1–9.",
+      "difficulty": "core"
+    },
+    {
+      "id": "v16",
+      "prompt": "A passing pytest suite after generation means:",
+      "choices": [
+        "The product is fair and causal",
+        "The specified tests passed — not that the spec was complete",
+        "You can skip EDA",
+        "Drift cannot happen"
+      ],
+      "answer": 1,
+      "explanation": "Tests are only as good as the invariants you wrote.",
+      "difficulty": "core"
+    }
+  ]
+}

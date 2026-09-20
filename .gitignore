@@ -1,0 +1,33 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Study progress (keep the template, ignore personal scores)
+progress/my-progress.json
+quizzes/.last-session.json
+
+# Local data dumps
+*.parquet
+!projects/**/data/.gitkeep
+projects/**/output/

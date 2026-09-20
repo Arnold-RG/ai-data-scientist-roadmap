@@ -1,0 +1,215 @@
+{
+  "title": "Stage 04 — Coding",
+  "description": "Python, DSA, SQL.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "c01",
+      "prompt": "A Python virtual environment is for:",
+      "choices": [
+        "Faster NumPy",
+        "Isolating project dependencies",
+        "GPU scheduling",
+        "SQL windows"
+      ],
+      "answer": 1,
+      "explanation": "This repo uses .venv + requirements.txt.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c02",
+      "prompt": "Average dict lookup complexity is:",
+      "choices": [
+        "O(n)",
+        "O(1)",
+        "O(n log n)",
+        "O(n²)"
+      ],
+      "answer": 1,
+      "explanation": "Hash table average O(1); worst case pathological.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c03",
+      "prompt": "Mutable default arguments in Python are dangerous because:",
+      "choices": [
+        "They are slow",
+        "The default object is created once and shared across calls",
+        "They break venv",
+        "They cannot be type-hinted"
+      ],
+      "answer": 1,
+      "explanation": "Use None and create a new list inside.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c04",
+      "prompt": "pandas aligns Series primarily on:",
+      "choices": [
+        "Row number always",
+        "Index labels",
+        "Column alphabetical order",
+        "dtypes"
+      ],
+      "answer": 1,
+      "explanation": "Silent misalignment is a classic bug; reset_index / merge explicitly.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c05",
+      "prompt": "iterrows on a million-row frame is usually:",
+      "choices": [
+        "The fastest pandas path",
+        "An O-too-slow smell vs vectorized ops",
+        "Required for groupby",
+        "A SQL standard"
+      ],
+      "answer": 1,
+      "explanation": "Prefer vectorized, groupby, or NumPy.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c06",
+      "prompt": "SQL WHERE vs HAVING:",
+      "choices": [
+        "WHERE filters after GROUP BY",
+        "WHERE filters rows before aggregation; HAVING after",
+        "They are identical",
+        "HAVING only works with JOIN"
+      ],
+      "answer": 1,
+      "explanation": "Mental order: FROM → WHERE → GROUP BY → HAVING → SELECT.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c07",
+      "prompt": "LEFT JOIN vs INNER:",
+      "choices": [
+        "LEFT keeps all left rows; INNER keeps matches only",
+        "LEFT is faster always",
+        "INNER keeps all left rows",
+        "They differ only for NULL keys in theory not practice"
+      ],
+      "answer": 0,
+      "explanation": "Unmatched left rows get NULLs on the right.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c08",
+      "prompt": "If the right join key is not unique, INNER JOIN:",
+      "choices": [
+        "Drops duplicates automatically",
+        "Can duplicate left rows (grain explodes)",
+        "Becomes a window function",
+        "Fails in SQL"
+      ],
+      "answer": 1,
+      "explanation": "Check grain after every join.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c09",
+      "prompt": "COUNT(col) vs COUNT(*):",
+      "choices": [
+        "Identical always",
+        "COUNT(col) skips NULL in col",
+        "COUNT(*) skips NULL in all columns",
+        "COUNT(col) counts distinct only"
+      ],
+      "answer": 1,
+      "explanation": "NULLs are not values.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c10",
+      "prompt": "A window function typically:",
+      "choices": [
+        "Collapses to one row per group",
+        "Computes across a partition while keeping row grain",
+        "Replaces JOIN",
+        "Cannot use ORDER BY"
+      ],
+      "answer": 1,
+      "explanation": "ROW_NUMBER, LAG, running sums.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c11",
+      "prompt": "NULL = NULL in SQL is:",
+      "choices": [
+        "TRUE",
+        "UNKNOWN / not TRUE",
+        "0",
+        "A syntax error always"
+      ],
+      "answer": 1,
+      "explanation": "Use IS NULL.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c12",
+      "prompt": "top-k frequent items is usually solved with:",
+      "choices": [
+        "Nested loops only",
+        "A hash count then heap or sort",
+        "PCA",
+        "Softmax"
+      ],
+      "answer": 1,
+      "explanation": "See exercises.top_k_frequent.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c13",
+      "prompt": "A sliding-window moving average is:",
+      "choices": [
+        "O(n²) necessarily",
+        "A two-pointer / convolution pattern in O(n)",
+        "A join",
+        "Backprop"
+      ],
+      "answer": 1,
+      "explanation": "exercises.moving_average uses convolution.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c14",
+      "prompt": "CTE (WITH clause) is mainly:",
+      "choices": [
+        "A new storage engine",
+        "A named subquery for readability (sometimes inlined)",
+        "A window",
+        "A transaction isolation level"
+      ],
+      "answer": 1,
+      "explanation": "Correctness first; some engines materialize, some inline.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c15",
+      "prompt": "NumPy axis=0 on a 2-D array aggregates:",
+      "choices": [
+        "Across columns (down rows)",
+        "Across rows (along columns) wait — down the rows, collapsing the row axis",
+        "Only the last element",
+        "The Fortran order flag"
+      ],
+      "answer": 1,
+      "explanation": "axis=0 collapses rows; you get one value per column.",
+      "difficulty": "core"
+    },
+    {
+      "id": "c16",
+      "prompt": "Hashing requires keys to be:",
+      "choices": [
+        "Mutable lists",
+        "Hashable (typically immutable) types",
+        "Floats only",
+        "DataFrames"
+      ],
+      "answer": 1,
+      "explanation": "Tuples work; lists do not as dict keys.",
+      "difficulty": "core"
+    }
+  ]
+}

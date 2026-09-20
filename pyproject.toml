@@ -1,0 +1,12 @@
+[project]
+name = "ai-data-scientist-roadmap"
+version = "1.0.0"
+description = "A complete study curriculum for the AI and Data Scientist path, with lessons, quizzes, tests, and projects."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q --tb=short"

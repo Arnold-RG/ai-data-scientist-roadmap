@@ -1,0 +1,4 @@
+CUPED (Controlled-experiment Using Pre-Experiment Data) reduces the variance of an experiment metric.
+It adjusts the outcome Y using a pre-treatment covariate X: Y_adj = Y - theta * (X - mean(X)).
+theta is Cov(Y, X) / Var(X). The treatment effect on Y_adj matches the effect on Y if X is measured before treatment.
+Use CUPED when you have a stable pre-period metric that correlates with the outcome.

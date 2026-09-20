@@ -1,0 +1,215 @@
+{
+  "title": "Stage 09 — AI Engineering",
+  "description": "Prompts, RAG, agents, fine-tuning.",
+  "passing_score": 70,
+  "questions": [
+    {
+      "id": "a01",
+      "prompt": "An LLM is fundamentally:",
+      "choices": [
+        "A consistent knowledge base",
+        "A next-token (or masked-token) model",
+        "A relational database",
+        "An experiment platform"
+      ],
+      "answer": 1,
+      "explanation": "Fluency is not truth.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a02",
+      "prompt": "A long context window:",
+      "choices": [
+        "Guarantees the model reads your buried policy",
+        "Is a larger bag, not a memory architecture — still put evidence near the question",
+        "Removes hallucinations",
+        "Replaces retrieval"
+      ],
+      "answer": 1,
+      "explanation": "Lost-in-the-middle is a real failure mode.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a03",
+      "prompt": "RAG's first job is to:",
+      "choices": [
+        "Fine-tune all weights",
+        "Retrieve relevant chunks, then generate (or extract) with that evidence",
+        "Train k-means",
+        "Increase temperature"
+      ],
+      "answer": 1,
+      "explanation": "If retrieval is wrong, generation lies more eloquently.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a04",
+      "prompt": "Prefer RAG over fine-tuning when:",
+      "choices": [
+        "You need a new writing style only",
+        "Facts change and you need citations to private docs",
+        "You have 12 labeled sentences",
+        "You want cheaper prompts only"
+      ],
+      "answer": 1,
+      "explanation": "Fine-tune is for style/behavior more than a wiki.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a05",
+      "prompt": "Prefer fine-tuning when:",
+      "choices": [
+        "The wiki updates hourly",
+        "You must stabilize format/style/domain behavior prompting cannot hold",
+        "You need legal citations to changing policy",
+        "n=3"
+      ],
+      "answer": 1,
+      "explanation": "Still evaluate; it is not a knowledge update mechanism.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a06",
+      "prompt": "An agent differs from a workflow in that:",
+      "choices": [
+        "Workflows use tools; agents never do",
+        "The model chooses tools in a loop vs a designed DAG",
+        "Agents cannot fail",
+        "Workflows require GPUs"
+      ],
+      "answer": 1,
+      "explanation": "Start with workflows; add loops with timeouts.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a07",
+      "prompt": "The most important RAG metric to debug first is often:",
+      "choices": [
+        "BLEU on poetry",
+        "Retrieval hit rate / recall@k",
+        "GPU utilization",
+        "Number of agents"
+      ],
+      "answer": 1,
+      "explanation": "Groundedness is downstream of retrieval.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a08",
+      "prompt": "Prompting should specify:",
+      "choices": [
+        "Only “be helpful”",
+        "Constraints, schema, and how to use provided evidence",
+        "The learning rate",
+        "k-means k"
+      ],
+      "answer": 1,
+      "explanation": "Boring specs beat adjectives.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a09",
+      "prompt": "Hallucination should be treated as:",
+      "choices": [
+        "A rare bug in one vendor",
+        "A default failure mode to measure",
+        "Proof the model is creative in a good way for facts",
+        "Solved by larger temperature"
+      ],
+      "answer": 1,
+      "explanation": "Eval sets: faithfulness, relevance, refusal.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a10",
+      "prompt": "This repo's RAG-lite uses TF-IDF to show:",
+      "choices": [
+        "You must have a paid API",
+        "Retrieval quality is independent of a vendor LLM",
+        "SQL is obsolete",
+        "Attention is unnecessary theoretically"
+      ],
+      "answer": 1,
+      "explanation": "Fix retrieve-then-read before wrapping GPT.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a11",
+      "prompt": "Tool allowlists for agents exist because:",
+      "choices": [
+        "Models never err",
+        "Open-ended tool use can loop, call garbage, or do harm",
+        "It speeds softmax",
+        "RAG forbids tools"
+      ],
+      "answer": 1,
+      "explanation": "Timeouts and traces too.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a12",
+      "prompt": "Validating JSON output from a model is:",
+      "choices": [
+        "Pedantic",
+        "Part of making a prompt a spec you can parse",
+        "Impossible",
+        "A form of fine-tuning"
+      ],
+      "answer": 1,
+      "explanation": "If you cannot parse it, you cannot ship it.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a13",
+      "prompt": "Chunking documents with overlap helps:",
+      "choices": [
+        "GPU heat",
+        "Not splitting a fact across chunk boundaries without a neighbor",
+        "PCA",
+        "Dropout"
+      ],
+      "answer": 1,
+      "explanation": "Too-large chunks dilute retrieval; too-small miss context.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a14",
+      "prompt": "Citations in RAG answers are for:",
+      "choices": [
+        "Decoration",
+        "Human audit of grounding",
+        "Increasing BLEU",
+        "Hiding retrieval mistakes"
+      ],
+      "answer": 1,
+      "explanation": "Force quotes from retrieved spans.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a15",
+      "prompt": "Temperature near 0 tends to:",
+      "choices": [
+        "Maximize diversity",
+        "Make sampling greedier / more deterministic",
+        "Train faster",
+        "Fix retrieval"
+      ],
+      "answer": 1,
+      "explanation": "For extraction tasks, low temperature is usual.",
+      "difficulty": "core"
+    },
+    {
+      "id": "a16",
+      "prompt": "A workflow DAG is often better than an agent when:",
+      "choices": [
+        "The path is enumerable and you need reliability",
+        "You cannot specify any steps",
+        "You have no eval set and want magic",
+        "SQL is involved always"
+      ],
+      "answer": 0,
+      "explanation": "Do not pay the loop tax without a reason.",
+      "difficulty": "core"
+    }
+  ]
+}

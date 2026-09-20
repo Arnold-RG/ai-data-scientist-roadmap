@@ -1,0 +1,527 @@
+{
+  "title": "Final exam — mixed stages",
+  "description": "Forty questions across the whole map. Passing score 75%.",
+  "passing_score": 75,
+  "questions": [
+    {
+      "id": "f01",
+      "prompt": "The official first stage on the AI/DS roadmap is:",
+      "choices": [
+        "MLOps",
+        "Mathematics (linear algebra, calculus, analysis)",
+        "Agents",
+        "Docker"
+      ],
+      "answer": 1,
+      "explanation": "Models are linear algebra moved by calculus.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f02",
+      "prompt": "ŷ = w·x is:",
+      "choices": [
+        "A convolution",
+        "A dot product / linear score",
+        "k-means",
+        "Dropout"
+      ],
+      "answer": 1,
+      "explanation": "Stage 01.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f03",
+      "prompt": "Gradient descent steps:",
+      "choices": [
+        "Along +∇L",
+        "Along −∇L",
+        "Along the Hessian only",
+        "Randomly always"
+      ],
+      "answer": 1,
+      "explanation": "Downhill.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f04",
+      "prompt": "PCA uses:",
+      "choices": [
+        "Target y",
+        "Directions of variance in X",
+        "Random forests",
+        "RAG"
+      ],
+      "answer": 1,
+      "explanation": "Unsupervised compression.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f05",
+      "prompt": "CLT applies to:",
+      "choices": [
+        "Any raw histogram",
+        "Means of i.i.d. finite-variance variables",
+        "A single Cauchy draw",
+        "p-values"
+      ],
+      "answer": 1,
+      "explanation": "Stage 02.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f06",
+      "prompt": "p-value is not:",
+      "choices": [
+        "A tail probability under H₀",
+        "P(H₀ true | data)",
+        "Used in tests",
+        "Related to Type I"
+      ],
+      "answer": 1,
+      "explanation": "Common misconception.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f07",
+      "prompt": "Peeking inflates:",
+      "choices": [
+        "Only power",
+        "Type I error",
+        "n",
+        "CUPED θ"
+      ],
+      "answer": 1,
+      "explanation": "Optional stopping.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f08",
+      "prompt": "CUPED needs X to be:",
+      "choices": [
+        "The treatment",
+        "Pre-treatment and predictive of Y",
+        "The p-value",
+        "A future outcome"
+      ],
+      "answer": 1,
+      "explanation": "Variance reduction.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f09",
+      "prompt": "Ratio metrics need:",
+      "choices": [
+        "Nothing special",
+        "Careful SEs (delta method / linearization)",
+        "Accuracy",
+        "ReLU"
+      ],
+      "answer": 1,
+      "explanation": "Both parts random.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f10",
+      "prompt": "Omitted variable bias is a:",
+      "choices": [
+        "CI/CD issue",
+        "Causal identification failure",
+        "GPU OOM",
+        "Softmax bug"
+      ],
+      "answer": 1,
+      "explanation": "Stage 03.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f11",
+      "prompt": "OLS slope simple regression:",
+      "choices": [
+        "Var(X)/Cov",
+        "Cov(X,Y)/Var(X)",
+        "Mean(Y)",
+        "AUC"
+      ],
+      "answer": 1,
+      "explanation": "Same as CUPED θ.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f12",
+      "prompt": "ARIMA's I is:",
+      "choices": [
+        "Instruments",
+        "Differencing",
+        "Imputation",
+        "Images"
+      ],
+      "answer": 1,
+      "explanation": "Integration order.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f13",
+      "prompt": "SQL grain exploded after JOIN:",
+      "choices": [
+        "Impossible",
+        "Non-unique key on one side",
+        "A window",
+        "INNER vs LEFT only"
+      ],
+      "answer": 1,
+      "explanation": "Stage 04.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f14",
+      "prompt": "Window functions:",
+      "choices": [
+        "Always collapse rows",
+        "Keep row grain while using a partition",
+        "Are Python-only",
+        "Replace GROUP BY always"
+      ],
+      "answer": 1,
+      "explanation": "ROW_NUMBER etc.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f15",
+      "prompt": "Dict average lookup:",
+      "choices": [
+        "O(n)",
+        "O(1)",
+        "O(n²)",
+        "O(n log n)"
+      ],
+      "answer": 1,
+      "explanation": "Hashing.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f16",
+      "prompt": "Leakage example:",
+      "choices": [
+        "Lag features from the past",
+        "Post-outcome fields as features",
+        "A time split",
+        "A histogram"
+      ],
+      "answer": 1,
+      "explanation": "Stage 05.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f17",
+      "prompt": "MNAR:",
+      "choices": [
+        "Missingness depends on the missing value",
+        "Always MCAR",
+        "A join type",
+        "A loss"
+      ],
+      "answer": 0,
+      "explanation": "Missingness is the signal.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f18",
+      "prompt": "Fit scaler on:",
+      "choices": [
+        "All data",
+        "Train only",
+        "Test only",
+        "y"
+      ],
+      "answer": 1,
+      "explanation": "Stage 06.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f19",
+      "prompt": "Fraud 1% accuracy trap:",
+      "choices": [
+        "Accuracy is perfect as a KPI",
+        "Majority class wins accuracy",
+        "Recall is always 1",
+        "Trees fail"
+      ],
+      "answer": 1,
+      "explanation": "Use the right metric.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f20",
+      "prompt": "Boosting fits:",
+      "choices": [
+        "Random labels",
+        "Residuals / gradients",
+        "Only k-means",
+        "SQL"
+      ],
+      "answer": 1,
+      "explanation": "Sequential.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f21",
+      "prompt": "k-means likes:",
+      "choices": [
+        "Circles of equal variance in scaled space, roughly",
+        "Text only",
+        "Causal graphs",
+        "Images only"
+      ],
+      "answer": 0,
+      "explanation": "Spherical blobs.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f22",
+      "prompt": "Bagging reduces:",
+      "choices": [
+        "n",
+        "Variance",
+        "The learning rate",
+        "Tokens"
+      ],
+      "answer": 1,
+      "explanation": "Forests.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f23",
+      "prompt": "ReLU:",
+      "choices": [
+        "max(0,z)",
+        "sigmoid",
+        "softmax",
+        "dot"
+      ],
+      "answer": 0,
+      "explanation": "Stage 07.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f24",
+      "prompt": "CNNs share:",
+      "choices": [
+        "No weights",
+        "Spatial filters",
+        "SQL keys",
+        "p-values"
+      ],
+      "answer": 1,
+      "explanation": "Locality.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f25",
+      "prompt": "LSTM vs RNN:",
+      "choices": [
+        "No difference",
+        "Gates/cell help long-range gradients",
+        "LSTM cannot model sequences",
+        "RNN is a CNN"
+      ],
+      "answer": 1,
+      "explanation": "Vanishing.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f26",
+      "prompt": "Attention formula core:",
+      "choices": [
+        "softmax(QKᵀ/√d)",
+        "k-means(Q)",
+        "maxpool(K)",
+        "OLS"
+      ],
+      "answer": 0,
+      "explanation": "Then times V.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f27",
+      "prompt": "GPT mask:",
+      "choices": [
+        "Bidirectional",
+        "Causal",
+        "None ever",
+        "Random"
+      ],
+      "answer": 1,
+      "explanation": "No future tokens.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f28",
+      "prompt": "Serialize:",
+      "choices": [
+        "Last layer only",
+        "Full pipeline",
+        "Test CSV",
+        "The CI YAML only"
+      ],
+      "answer": 1,
+      "explanation": "Stage 08.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f29",
+      "prompt": "Concept drift:",
+      "choices": [
+        "P(X) only",
+        "P(Y|X) changed",
+        "Git",
+        "Dropout"
+      ],
+      "answer": 1,
+      "explanation": "World moved.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f30",
+      "prompt": "Batch vs online:",
+      "choices": [
+        "Online is always better",
+        "Online if you need low-latency per request",
+        "Batch needs HTTP",
+        "Same"
+      ],
+      "answer": 1,
+      "explanation": "Start batch.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f31",
+      "prompt": "LLM is not:",
+      "choices": [
+        "A token model",
+        "A source of truth / DB",
+        "Useful with RAG",
+        "A component"
+      ],
+      "answer": 1,
+      "explanation": "Stage 09.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f32",
+      "prompt": "RAG retrieve-then:",
+      "choices": [
+        "Fine-tune always",
+        "Generate/extract with evidence",
+        "Drop documents",
+        "Increase T"
+      ],
+      "answer": 1,
+      "explanation": "Ground.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f33",
+      "prompt": "Agent vs workflow:",
+      "choices": [
+        "Same",
+        "Agent chooses tools in a loop; workflow is a designed graph",
+        "Workflows cannot use tools",
+        "Agents never fail"
+      ],
+      "answer": 1,
+      "explanation": "Timeouts.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f34",
+      "prompt": "Fix RAG by first:",
+      "choices": [
+        "Buying a bigger model only",
+        "Measuring retrieval recall@k",
+        "Raising temperature",
+        "Removing citations"
+      ],
+      "answer": 1,
+      "explanation": "Garbage in.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f35",
+      "prompt": "Fine-tune vs RAG for a changing wiki:",
+      "choices": [
+        "Fine-tune daily",
+        "RAG (or search) for facts; citations",
+        "Neither",
+        "k-means"
+      ],
+      "answer": 1,
+      "explanation": "Facts vs style.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f36",
+      "prompt": "Assistant protocol:",
+      "choices": [
+        "Accept all",
+        "Tests + read diff",
+        "Commit .env",
+        "Skip quiz"
+      ],
+      "answer": 1,
+      "explanation": "Stage 10.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f37",
+      "prompt": "Generated train/test leakage:",
+      "choices": [
+        "Impossible",
+        "Common; you must catch it",
+        "Required",
+        "Only in R"
+      ],
+      "answer": 1,
+      "explanation": "Review.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f38",
+      "prompt": "Primary metric in an A/B test:",
+      "choices": [
+        "All dashboard lines",
+        "One pre-registered outcome",
+        "The p-value",
+        "AUC always"
+      ],
+      "answer": 1,
+      "explanation": "Peeking extras.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f39",
+      "prompt": "Stationarity (weak):",
+      "choices": [
+        "i.i.d. required",
+        "Moments depend on lag not time",
+        "No seasonality",
+        "High R²"
+      ],
+      "answer": 1,
+      "explanation": "Stage 03.",
+      "difficulty": "core"
+    },
+    {
+      "id": "f40",
+      "prompt": "A data scientist's loop is:",
+      "choices": [
+        "Train nets only",
+        "Collect, clean, analyze, share a decision",
+        "Only MLOps",
+        "Only prompts"
+      ],
+      "answer": 1,
+      "explanation": "The model is optional; the question is not.",
+      "difficulty": "core"
+    }
+  ]
+}

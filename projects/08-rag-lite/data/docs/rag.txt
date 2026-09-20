@@ -1,0 +1,3 @@
+Retrieval-augmented generation retrieves relevant document chunks before a language model answers.
+If retrieval is wrong, the generator writes a fluent wrong answer. Measure recall at k on a labeled question set first.
+Fine-tuning is for style and behavior; RAG is for changing private facts that need citations.
