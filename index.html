@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI &amp; Data Scientist Study Atlas</title>
+  <meta name="description" content="A professional study atlas for the AI and Data Scientist roadmap: lessons, quizzes, projects, and interview prep." />
+  <link rel="icon" href="web/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="web/assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="topbar">
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Open navigation">Menu</button>
+    <a class="brand" href="#/" data-link>
+      <span class="brand-mark">ADS</span>
+      <span class="brand-text">
+        <strong>Study Atlas</strong>
+        <em>AI &amp; Data Scientist</em>
+      </span>
+    </a>
+    <div class="top-actions">
+      <button class="search-btn" id="search-btn" type="button">Search <kbd>K</kbd></button>
+      <a class="top-link" href="https://github.com/Arnold-RG/ai-data-scientist-roadmap" target="_blank" rel="noopener">GitHub</a>
+      <a class="top-link" href="https://roadmap.sh/ai-data-scientist" target="_blank" rel="noopener">Source map</a>
+    </div>
+  </header>
+  <div class="shell">
+    <aside class="spine" id="spine" aria-label="Primary">
+      <nav class="nav">
+        <a href="#/" data-link>Overview</a>
+        <a href="#/roadmap" data-link>Roadmap</a>
+        <a href="#/library" data-link>Library</a>
+        <a href="#/quizzes" data-link>Quizzes</a>
+        <a href="#/projects" data-link>Projects</a>
+        <a href="#/plan" data-link>Study plan</a>
+        <a href="#/interview" data-link>Interview</a>
+        <a href="#/glossary" data-link>Glossary</a>
+        <a href="#/faq" data-link>FAQ</a>
+        <a href="#/progress" data-link>Progress</a>
+      </nav>
+      <p class="spine-label">Stages</p>
+      <ol class="spine-plates" id="spine-plates"></ol>
+      <p class="spine-foot">Public study resource · progress stays in this browser</p>
+    </aside>
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+  <div class="search-scrim" id="search-scrim" hidden>
+    <div class="search-panel" role="dialog" aria-label="Search curriculum">
+      <input id="search-input" type="search" placeholder="Search stages, lessons, quizzes, terms…" autocomplete="off" />
+      <div id="search-results"></div>
+      <p class="search-hint">Esc to close · Enter opens the first match</p>
+    </div>
+  </div>
+  <script>
+    window.REPO_BASE = (function () {
+      const p = location.pathname.replace(/index\.html$/i, "");
+      if (p.indexOf("/web/") !== -1) return p.replace(/\/web\/.*$/, "/");
+      return p.endsWith("/") ? p : p.replace(/[^/]+$/, "");
+    })();
+  </script>
+  <script src="web/assets/curriculum.js"></script>
+  <script src="web/assets/info.js"></script>
+  <script src="web/assets/markdown.js"></script>
+  <script src="web/assets/app.js"></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 # AI & Data Scientist Study Roadmap
 
+[![Live atlas](https://img.shields.io/badge/live%20atlas-GitHub%20Pages-0f2744)](https://arnold-rg.github.io/ai-data-scientist-roadmap/)
 [![Study checks](https://img.shields.io/badge/study%20checks-pytest%20%2B%20quizzes-0f766e)](./.github/workflows/study-checks.yml)
 [![Curriculum](https://img.shields.io/badge/stages-10-0ea5e9)](./stages)
 [![Quizzes](https://img.shields.io/badge/quizzes-12%20banks-7c3aed)](./quizzes)
@@ -7,6 +8,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-334155)](./LICENSE)
 
 A full **study curriculum** for becoming an AI and Data Scientist — lessons, quizzes, checkpoint tests, interview drills, and portfolio projects.
+
+**Use it in the browser:** [https://arnold-rg.github.io/ai-data-scientist-roadmap/](https://arnold-rg.github.io/ai-data-scientist-roadmap/)
 
 This repository follows the official topic order on [roadmap.sh/ai-data-scientist](https://roadmap.sh/ai-data-scientist) and expands every node into something you can actually **learn, test, and build**.
 
@@ -85,7 +88,19 @@ Final exam: `python quizzes/run_quiz.py --exam`
 4. Track yourself in [progress/tracker.md](progress/tracker.md).
 5. Before interviews, run `python quizzes/run_quiz.py --interview` and work through [`interview/`](./interview).
 
-### Setup
+### Study in the browser (live)
+
+Open the public atlas:
+
+**[https://arnold-rg.github.io/ai-data-scientist-roadmap/](https://arnold-rg.github.io/ai-data-scientist-roadmap/)**
+
+Search (Ctrl/Cmd+K), read lessons, take quizzes, follow the 12-week plan, and track progress in the browser. To run the same site locally:
+
+```bash
+python web/serve.py
+```
+
+### Setup (quizzes from the terminal + projects)
 
 ```bash
 python -m venv .venv
