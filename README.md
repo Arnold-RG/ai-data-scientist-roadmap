@@ -208,6 +208,12 @@ Related roadmaps when you finish: [Python](https://roadmap.sh/python) · [Data A
 
 ---
 
+## Author
+
+Arnold Rurangwa · ARNOVA Group · Computer Engineer
+
+---
+
 ## License
 
 MIT. See [LICENSE](./LICENSE).
