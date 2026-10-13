@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#0f2744"/>
-  <text x="16" y="21" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#c4a35a">ADS</text>
+  <rect width="32" height="32" fill="#10141c"/>
+  <rect width="32" height="2" fill="#d4bc8a"/>
+  <path d="M8.5 24.5 L16 8.5 L23.5 24.5" fill="none" stroke="#f4f0e8" stroke-width="1.15"/>
+  <path d="M11.2 18.2 H20.8" stroke="#d4bc8a" stroke-width="1.15"/>
 </svg>

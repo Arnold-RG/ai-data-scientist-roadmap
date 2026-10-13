@@ -4,33 +4,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI &amp; Data Scientist Study Atlas</title>
-  <meta name="description" content="A professional study atlas for the AI and Data Scientist roadmap: lessons, quizzes, projects, and interview prep." />
+  <meta name="description" content="A ten-stage study course for AI and data science: lessons, quizzes, projects, and interview practice. Read it in order." />
+  <meta name="author" content="Arnold Rurangwa" />
+  <meta name="theme-color" content="#10141c" id="theme-color" />
+  <link rel="canonical" href="https://arnold-rg.github.io/ai-data-scientist-roadmap/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Study Atlas" />
+  <meta property="og:title" content="AI &amp; Data Scientist Study Atlas" />
+  <meta property="og:description" content="A ten-stage study course: lessons, quizzes, projects, and interview practice." />
+  <meta property="og:url" content="https://arnold-rg.github.io/ai-data-scientist-roadmap/" />
+  <meta property="og:image" content="https://arnold-rg.github.io/ai-data-scientist-roadmap/web/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Study Atlas, a ten-stage course in AI and data science." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI &amp; Data Scientist Study Atlas" />
+  <meta name="twitter:description" content="A ten-stage study course: lessons, quizzes, projects, and interview practice." />
+  <meta name="twitter:image" content="https://arnold-rg.github.io/ai-data-scientist-roadmap/web/assets/og.png" />
+  <meta name="twitter:image:alt" content="Study Atlas, a ten-stage course in AI and data science." />
   <link rel="icon" href="web/assets/favicon.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("adsr-theme");
+        var theme = saved === "day" || saved === "night"
+          ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "night" : "day");
+        document.documentElement.setAttribute("data-theme", theme);
+        var meta = document.getElementById("theme-color");
+        if (meta) meta.setAttribute("content", theme === "night" ? "#0b0e13" : "#10141c");
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "day");
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="web/assets/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "AI & Data Scientist Study Atlas",
+    "description": "A ten-stage study course: lessons, quizzes, projects, and interview practice.",
+    "url": "https://arnold-rg.github.io/ai-data-scientist-roadmap/",
+    "inLanguage": "en",
+    "provider": {
+      "@type": "Person",
+      "name": "Arnold Rurangwa",
+      "affiliation": { "@type": "Organization", "name": "ARNOVA Group" }
+    },
+    "isBasedOn": "https://roadmap.sh/ai-data-scientist"
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#view">Skip to content</a>
-  <header class="topbar">
-    <button class="menu-btn" id="menu-btn" type="button" aria-label="Open navigation">Menu</button>
+  <header class="mast">
+    <button class="mast-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="spine">Index</button>
     <a class="brand" href="#/" data-link>
-      <span class="brand-mark">ADS</span>
+      <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-text">
         <strong>Study Atlas</strong>
         <em>AI &amp; Data Scientist</em>
       </span>
     </a>
-    <div class="top-actions">
-      <button class="search-btn" id="search-btn" type="button">Search <kbd>K</kbd></button>
-      <a class="top-link" href="https://github.com/Arnold-RG/ai-data-scientist-roadmap" target="_blank" rel="noopener">GitHub</a>
-      <a class="top-link" href="https://roadmap.sh/ai-data-scientist" target="_blank" rel="noopener">Source map</a>
+    <div class="mast-actions">
+      <button class="mast-btn" id="search-btn" type="button" aria-expanded="false" aria-controls="search-scrim">
+        <span class="search-label">Search</span>
+        <kbd class="mod-key">Ctrl K</kbd>
+      </button>
+      <button class="mast-btn" id="theme-btn" type="button" aria-pressed="false">Night</button>
+      <a class="top-link" href="https://github.com/Arnold-RG/ai-data-scientist-roadmap" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="top-link" href="https://roadmap.sh/ai-data-scientist" target="_blank" rel="noopener noreferrer">Source map<span class="sr-only"> (opens in a new tab)</span></a>
     </div>
   </header>
   <div class="shell">
-    <aside class="spine" id="spine" aria-label="Primary">
-      <nav class="nav">
+    <div class="nav-scrim" id="nav-scrim" hidden></div>
+    <aside class="spine" id="spine" aria-label="Curriculum">
+      <nav class="nav" aria-label="Primary">
         <a href="#/" data-link>Overview</a>
         <a href="#/roadmap" data-link>Roadmap</a>
         <a href="#/library" data-link>Library</a>
@@ -42,19 +95,23 @@
         <a href="#/faq" data-link>FAQ</a>
         <a href="#/progress" data-link>Progress</a>
       </nav>
-      <p class="spine-label">Stages</p>
-      <ol class="spine-plates" id="spine-plates"></ol>
-      <p class="spine-foot">Public study resource · progress stays in this browser</p>
+      <p class="spine-label" id="stages-label">Stages</p>
+      <ol class="spine-plates" id="spine-plates" aria-labelledby="stages-label"></ol>
+      <p class="spine-foot">Progress stays in this browser.<br /><a href="https://github.com/Arnold-RG/ai-data-scientist-roadmap" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://roadmap.sh/ai-data-scientist" target="_blank" rel="noopener noreferrer">Source map</a></p>
     </aside>
     <main id="view" class="view" tabindex="-1"></main>
   </div>
   <div class="search-scrim" id="search-scrim" hidden>
-    <div class="search-panel" role="dialog" aria-label="Search curriculum">
-      <input id="search-input" type="search" placeholder="Search stages, lessons, quizzes, terms…" autocomplete="off" />
-      <div id="search-results"></div>
-      <p class="search-hint">Esc to close · Enter opens the first match</p>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+      <h2 id="search-title" class="sr-only">Search the curriculum</h2>
+      <input id="search-input" type="search" role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" aria-label="Search stages, lessons, quizzes, and terms" placeholder="Search the atlas" autocomplete="off" spellcheck="false" />
+      <div id="search-results" role="listbox" aria-label="Search results"></div>
+      <p class="search-hint">Arrow keys move · Enter opens · Esc closes</p>
     </div>
   </div>
+  <noscript>
+    <p class="noscript">Lessons and quizzes in this atlas need JavaScript. The same files are readable in the GitHub repository.</p>
+  </noscript>
   <script>
     window.REPO_BASE = (function () {
       const p = location.pathname.replace(/index\.html$/i, "");

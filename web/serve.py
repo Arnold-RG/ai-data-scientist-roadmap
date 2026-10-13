@@ -23,6 +23,8 @@ MIME = {
     ".svg": "image/svg+xml",
     ".png": "image/png",
     ".ico": "image/x-icon",
+    ".xml": "application/xml; charset=utf-8",
+    ".webmanifest": "application/manifest+json",
 }
 
 

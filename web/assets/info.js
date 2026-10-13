@@ -72,5 +72,17 @@ window.INFO = {
     { w: 10, focus: "AI engineering", do: "RAG-lite + quiz 09" },
     { w: 11, focus: "Assistants + capstone", do: "Churn report + quiz 10" },
     { w: 12, focus: "Integration", do: "Final exam + interview cases" }
+  ],
+  weeks24: [
+    { w: "1–3", focus: "Mathematics", do: "Redo the linear algebra examples on paper." },
+    { w: "4–6", focus: "Statistics and experiments", do: "A/B project. Write a one-page experiment design before you code." },
+    { w: "7–8", focus: "Econometrics", do: "Causal thinking, then the time series project." },
+    { w: "9–10", focus: "Python, DSA, SQL", do: "One easy or medium problem a day is enough." },
+    { w: "11–12", focus: "EDA", do: "Retail project, plus a second dataset you choose (synthetic, or public and licensed)." },
+    { w: "13–16", focus: "Machine learning", do: "Houses and segments, then a second model family on the same data." },
+    { w: "17–19", focus: "Deep learning", do: "Sentiment and shapes. Read “Attention Is All You Need” after the transformer lesson." },
+    { w: "20–21", focus: "MLOps", do: "Model API, plus the workflow already in this repository." },
+    { w: "22–23", focus: "AI engineering and the capstone", do: "RAG-lite, prompts, agents, then the churn report." },
+    { w: "24", focus: "Integration", do: "Final exam, interview bank, and the case studies." }
   ]
 };

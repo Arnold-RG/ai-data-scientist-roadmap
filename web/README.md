@@ -10,6 +10,8 @@ Open http://127.0.0.1:8765/ locally, or the public site:
 
 https://arnold-rg.github.io/ai-data-scientist-roadmap/
 
+Search with Ctrl+K or Cmd+K. Night reading is in the header. A lesson’s own outline stays beside the text on a wide screen. Progress stays in the browser.
+
 ```bash
 python web/serve.py --no-browser
 ```
