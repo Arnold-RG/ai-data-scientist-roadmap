@@ -31,3 +31,12 @@ quizzes/.last-session.json
 *.parquet
 !projects/**/data/.gitkeep
 projects/**/output/
+
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+credentials.json
+
