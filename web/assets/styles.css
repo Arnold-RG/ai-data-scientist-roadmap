@@ -980,3 +980,60 @@ a { color: var(--link); }
   a { color: black; }
   .codeblock pre { color: black; background: #f4f4f4; }
 }
+
+/* —— Device coverage: fluid type, safe-areas, 320 → 4K —— */
+.mast {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
+  padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
+  height: calc(var(--mast-h) + env(safe-area-inset-top, 0px));
+}
+
+.mast-btn,
+.top-link,
+.choice,
+.actions a,
+.actions button,
+.path a,
+.index-list a {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.cover h1 {
+  font-size: clamp(2.2rem, 8vw, 4.6rem);
+  max-width: 14ch;
+}
+
+.cover .lede {
+  font-size: clamp(1.02rem, 2.3vw, 1.25rem);
+  max-width: 40ch;
+}
+
+.view {
+  padding-bottom: max(var(--view-pad-y), env(safe-area-inset-bottom, 0px));
+}
+
+@media (max-width: 359px) {
+  .brand-text em { display: none; }
+  .mast-actions .top-link { display: none; }
+  .tally { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1440px) {
+  .view { --view-pad-x: clamp(2rem, 5vw, 5.5rem); }
+}
+
+@media (min-width: 2000px) {
+  html { font-size: 21px; }
+  .shell { grid-template-columns: 20rem minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cover,
+  .plate,
+  .path a {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  }
+  .path a:hover { transform: translateY(-2px); }
+}
