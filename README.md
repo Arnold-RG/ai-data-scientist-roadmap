@@ -1,10 +1,11 @@
 # AI & Data Scientist Study Roadmap
 
-[![Live atlas](https://img.shields.io/badge/live%20atlas-GitHub%20Pages-0f2744)](https://arnold-rg.github.io/ai-data-scientist-roadmap/)
-[![Study checks](https://img.shields.io/badge/study%20checks-pytest%20%2B%20quizzes-0f766e)](./.github/workflows/study-checks.yml)
-[![Curriculum](https://img.shields.io/badge/stages-10-0ea5e9)](./stages)
-[![Quizzes](https://img.shields.io/badge/quizzes-12%20banks-7c3aed)](./quizzes)
-[![Projects](https://img.shields.io/badge/projects-10-f59e0b)](./projects)
+[![Live atlas](https://img.shields.io/badge/live%20atlas-GitHub%20Pages-0F2744)](https://arnold-rg.github.io/ai-data-scientist-roadmap/)
+[![Palette](https://img.shields.io/badge/slate%20%2B%20teal%20%2B%20amber-F59E0B?labelColor=0F766E)](https://arnold-rg.github.io/ai-data-scientist-roadmap/)
+[![Study checks](https://img.shields.io/badge/study%20checks-pytest%20%2B%20quizzes-0F766E)](./.github/workflows/study-checks.yml)
+[![Curriculum](https://img.shields.io/badge/stages-10-0F766E)](./stages)
+[![Quizzes](https://img.shields.io/badge/quizzes-12%20banks-0F2744)](./quizzes)
+[![Projects](https://img.shields.io/badge/projects-10-F59E0B)](./projects)
 [![License: MIT](https://img.shields.io/badge/license-MIT-334155)](./LICENSE)
 
 A full **study curriculum** for becoming an AI and Data Scientist — lessons, quizzes, checkpoint tests, interview drills, and portfolio projects.

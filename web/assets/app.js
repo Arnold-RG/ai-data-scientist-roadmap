@@ -275,6 +275,16 @@
     }
     el(`
       <section class="cover">
+        <div class="atlas-live" aria-hidden="true">
+          <div class="atlas-grid"></div>
+          <div class="atlas-ring"></div>
+          <div class="atlas-core"></div>
+          <span class="atlas-node"></span>
+          <span class="atlas-node"></span>
+          <span class="atlas-node"></span>
+          <span class="atlas-node"></span>
+          <span class="atlas-node"></span>
+        </div>
         <p class="kicker">Study atlas</p>
         <h1>Ten stages, in the order the work depends on them.</h1>
         <p class="lede">Lessons, ${st.questions || 226} questions, and ten projects whose data is generated in this repository. The sequence follows <a href="${
